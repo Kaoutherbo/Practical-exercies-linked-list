@@ -26,6 +26,8 @@ void afficher(Element *liste);
 int taille(Element *liste);
 int jieme(Element *liste, int j);
 Element *ajout_position(Element *liste, int e, int j);
-int getSize(char *msg);
 Element *createList(Element *head, int size);
+int getSize(char *msg);
+int getNum(char *msg);
+
 #endif

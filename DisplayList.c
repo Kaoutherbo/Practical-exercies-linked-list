@@ -14,7 +14,7 @@ void afficher(Element *liste)
     Element *tmp = liste;
     while (tmp != NULL)
     {
-        printf("%d\t", tmp->donnee);
+        printf("%d\n", tmp->donnee);
         tmp = tmp->suivant;
     }
 }
