@@ -12,12 +12,11 @@ int jieme(Element *liste, int j)
     if (liste != NULL)
     {
         Element *tmp = liste;
-        int count = 0;
+        int count = 1;
         while (tmp != NULL)
         {
            if (count == j)
                 return (tmp->donnee);
-            
             count++;
             tmp = tmp->suivant;
         }
