@@ -1,29 +1,43 @@
 #include "list.h"
 
 /**
- * ajout_position - function that add element at spesific position
+ * ajout_position - function that add element at specific position
  * 
- * @liste: pointer to first element of list
+ * @liste: pointer to the first element of the list
  * @e: number to be added 
- * @j: position to add element in list
+ * @j: position to add element in the list
 */
 
 Element *ajout_position(Element *liste, int e, int j)
 {
-    if(liste == NULL || j == 1)
-        return ajout_debut(liste,e);
-    
-    Element *currNode = liste, *preNode, *newNode;
-    newNode->donnee = e;
-   
-    for (size_t i = 0; i < j - 1; i++)
-    {
-        preNode =currNode;
-        currNode = currNode->suivant;
+    if (j < 1 || j > taille(liste) || liste == NULL) {
+        printf("Invalid position");
+        return liste;
     }
 
-    newNode->suivant = currNode;
-    preNode->suivant = newNode;
+    if (j == 1 && liste == NULL) {
+        // Add at the beginning
+        return ajout_debut(liste, e);
+    }
 
-    return liste;
+    if (liste != NULL)
+    {
+        Element *currNode = liste, *preNode, *newNode;
+        newNode = malloc(sizeof(Element));
+        if(newNode == NULL)
+        {
+            printf("Memory can't be allocated !");
+            exit(-1);
+        }
+        for (size_t i = 0; i < j - 1; i++)
+        {
+            preNode = currNode;
+            currNode = currNode->suivant;
+        }
+        newNode->suivant = currNode;
+        preNode->suivant = newNode;
+
+        return liste;
+    }
+    
 }
