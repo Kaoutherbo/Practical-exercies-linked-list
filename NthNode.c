@@ -9,7 +9,7 @@
 */
 int jieme(Element *liste, int j)
 {
-    if (liste != NULL)
+    if (liste != NULL && j <= taille(liste))
     {
         Element *tmp = liste;
         int count = 1;
@@ -21,4 +21,7 @@ int jieme(Element *liste, int j)
             tmp = tmp->suivant;
         }
     }
+    else
+        printf("EInvalid position ");
+        exit(-1);
 }
