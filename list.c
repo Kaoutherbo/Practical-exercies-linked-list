@@ -33,8 +33,7 @@ int main()
     // insert node at a specific position
     int pos = getSize("Which position you want to add node ? : ");
     int val = getNum("Enter the data of this node: ");
-    head = ajout_position(head, pos, val);
-
+    head = ajout_position(head, val, pos);
     // priting after inserting  node at specific position
     afficher(head);
 

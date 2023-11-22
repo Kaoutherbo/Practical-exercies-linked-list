@@ -10,8 +10,8 @@
 
 Element *ajout_position(Element *liste, int e, int j)
 {
-    if (j < 1 || j > taille(liste) || liste == NULL) {
-        printf("Invalid position");
+    if (j < 1 || j > taille(liste) + 1 || liste == NULL) {
+        printf("Invalid position\n");
         return liste;
     }
 
@@ -29,6 +29,7 @@ Element *ajout_position(Element *liste, int e, int j)
             printf("Memory can't be allocated !");
             exit(-1);
         }
+        newNode->donnee = e;
         for (size_t i = 0; i < j - 1; i++)
         {
             preNode = currNode;
