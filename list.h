@@ -6,9 +6,10 @@
 #include <stdlib.h>
 
 /**
- * 
- * @donnee: 
- * @suivant:
+ * Element - struct that contains the data and pointer 
+ * to next node of list
+ * @donnee: a number 
+ * @suivant: pointer to the next element of list
  * 
 */
 typedef struct Element
