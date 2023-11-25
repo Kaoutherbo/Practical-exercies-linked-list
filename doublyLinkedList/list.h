@@ -4,6 +4,7 @@
 // Header files
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 /**
  * Node - struct for doubly linked list that contains
@@ -35,5 +36,6 @@ typedef struct List
 
 // prototype of functions
 void initList(List** list);
+bool isEmpty(List *list);
 
 #endif
