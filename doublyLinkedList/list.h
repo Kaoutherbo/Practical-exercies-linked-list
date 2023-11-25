@@ -43,5 +43,7 @@ List* addEnd(List *list, int val) ;
 List* insertElement(List * list, int val, int position);
 void displayList(List* list);
 void displayRevList(List* list);
+List* deleteEnd(List *list);
+List* deleteBegin(List *list);
 
 #endif
