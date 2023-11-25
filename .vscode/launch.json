@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/LENOVO/Documents/Problem solving/Practical-exercies-linked-list-1/doublyLinkedList",
-      "program": "c:/Users/LENOVO/Documents/Problem solving/Practical-exercies-linked-list-1/doublyLinkedList/build/Debug/outDebug",
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
