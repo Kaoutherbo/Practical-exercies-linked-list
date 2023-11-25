@@ -37,5 +37,6 @@ typedef struct List
 // prototype of functions
 void initList(List** list);
 bool isEmpty(List *list);
+int nbrElements(List * list);
 
 #endif
