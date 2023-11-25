@@ -10,6 +10,6 @@ int main()
 {
     List *list;
 
-       initListe(&list);
+       initList(&list);
     return 0;
 }

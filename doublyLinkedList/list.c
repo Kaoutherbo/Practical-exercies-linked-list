@@ -1,7 +1,7 @@
 #include "list.h"
 
-void initListe(List* list)
+void initList(List** list)
 {
-    list->head = NULL;
-    list->tail = NULL;
+    (*list)->head = NULL;
+    (*list)->tail = NULL;
 }

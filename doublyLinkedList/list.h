@@ -34,6 +34,6 @@ typedef struct List
 
 
 // prototype of functions
-void initListe(List* list);
+void initList(List** list);
 
 #endif
