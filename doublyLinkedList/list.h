@@ -40,6 +40,6 @@ bool isEmpty(List *list);
 int lenghList(List * list);
 List* addBegin(List * list, int val);
 List* addEnd(List *list, int val) ;
-List* inseretElement(List * list, int val, int position);
+List* insertElement(List * list, int val, int position);
 
 #endif

@@ -10,7 +10,7 @@
  * Return: pointer to doubly linked list
 */
 
-List* inseretElement(List * list, int val, int position)
+List* insertElement(List * list, int val, int position)
 {
     if (list == NULL) {
         printf("Erreur : list not initialize.\n");
