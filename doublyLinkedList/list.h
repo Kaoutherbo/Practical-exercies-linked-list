@@ -41,5 +41,7 @@ int lenghList(List * list);
 List* addBegin(List * list, int val);
 List* addEnd(List *list, int val) ;
 List* insertElement(List * list, int val, int position);
+void displayList(List* list);
+void displayRevList(List* list);
 
 #endif
