@@ -1,14 +1,14 @@
 #include "list.h"
 
 /**
- * addBegin - function that add node in begining
+ * addEnd - function that add node at the end
  * 
  * @list: doubly linked list pointer
  * @val: data for the new node
  * Return: pointer to doubly linked list
 */
 
-List* ajoutEnQueue(List *list, int val) 
+List* addEnd(List *list, int val) 
 {
     if (list == NULL) {
         printf("Erreur : list not initialize.\n");

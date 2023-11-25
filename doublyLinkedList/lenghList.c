@@ -8,7 +8,7 @@
  * Return: number of elements of list
 */
 
-int nbrElements(List * list)
+int lenghList(List * list)
 {
     int count = 0;
     if(!isEmpty(list)){
