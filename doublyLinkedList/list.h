@@ -38,5 +38,6 @@ typedef struct List
 void initList(List** list);
 bool isEmpty(List *list);
 int nbrElements(List * list);
+List* addBegin(List * list, int val);
 
 #endif
