@@ -10,7 +10,7 @@
 void freeList(List *list) 
 {
     if (isEmpty(list)) {
-        printf("Erreur : list not initialize\n");
+        printf("Erreur : list is not initialize\n");
         exit(EXIT_FAILURE);
     }
     Node *currNode = list->head;
