@@ -45,5 +45,6 @@ void displayList(List* list);
 void displayRevList(List* list);
 List* deleteEnd(List *list);
 List* deleteBegin(List *list);
+void freeList(List *list) ;
 
 #endif
