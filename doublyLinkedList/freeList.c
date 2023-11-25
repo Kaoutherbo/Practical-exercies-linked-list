@@ -19,6 +19,6 @@ void freeList(List *list)
         free(currNode);
         currNode = next;
     }
-    free(list->head);
-    free(list->tail);
+    list->head = NULL;
+    list->tail = NULL;
 }
