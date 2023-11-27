@@ -14,9 +14,9 @@ List* deleteOption(List** list, int option)
 
     // deleting elements from the end
     if (option == 1)
-        *list = deleteEnd(*list);
+        *list = deleteBegin(*list);
     // deleting elements from the beginning
     else if (option == 2)
-        *list = deleteBegin(*list);
+        *list = deleteEnd(*list);
     return *list;
 }

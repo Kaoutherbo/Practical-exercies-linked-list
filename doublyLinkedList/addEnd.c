@@ -12,12 +12,12 @@ List* addEnd(List *list, int val)
 {
     if (list == NULL) {
         printf("Erreur : list not initialize.\n");
-        exit(EXIT_FAILURE);
+        return NULL;
     }
     Node *newNode = (Node *)malloc(sizeof(Node));
     if (newNode == NULL) {
         printf("Erreur Memory can't be allocated.\n");
-        exit(EXIT_FAILURE);
+        return NULL;
     }
 
     newNode->data = val;
@@ -35,6 +35,4 @@ List* addEnd(List *list, int val)
         newNode->prev = list->tail;
         list->tail = newNode;
     }
-    return list;
 }
-

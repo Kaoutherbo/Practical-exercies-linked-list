@@ -7,7 +7,8 @@
  * @list: doubly linked list
  * Return: true or false
 */
-bool isEmpty(List *list)
-{
-    return list->head == NULL;
+#include <stdbool.h>
+
+bool isEmpty(List *list) {
+    return list->head == NULL || list == NULL;
 }

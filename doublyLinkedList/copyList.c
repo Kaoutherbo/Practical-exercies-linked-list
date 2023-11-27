@@ -6,27 +6,23 @@
  * @list2: pointer to doubly linked list 2
  * Return: list1 after copying elements of list2 into it
 */
-List* copyList(List *list1, const List *list2)
+List* copyList(List *list1, List *list2)
 {
-    if (isEmpty(list1) || isEmpty(list2)) {
-        printf("Erreur: Lists are not initialized.\n");
-        // Handle the error, e.g., return NULL or an error code
-        exit(EXIT_FAILURE);
+    if (isEmpty(list1)) {
+        printf("Erreur: Source list is not initialized.\n");
+        return NULL;
     }
 
-    freeList(list1);
+    // Initialize the destination list
+    initList(&list1);
 
-    if (list2->head == NULL) {
-        list1->head = NULL;
-        list1->tail = NULL;
-        return list1;
-    }
 
-    Node *temp = list2->head;
+
+    Node *temp = list1->head;
     list1->head = createNode(temp->data);
     if (list1->head == NULL) {
         printf("Erreur: Memory can't be allocated.\n");
-        exit(EXIT_FAILURE);
+        return NULL;
     }
 
     Node *currNode = list1->head;
@@ -36,7 +32,7 @@ List* copyList(List *list1, const List *list2)
         currNode->next = createNode(temp->data);
         if (currNode->next == NULL) {
             printf("Erreur: Memory can't be allocated.\n");
-            exit(EXIT_FAILURE);
+            return NULL;
         }
 
         currNode->next->prev = currNode;

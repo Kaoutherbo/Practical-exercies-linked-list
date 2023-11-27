@@ -6,8 +6,9 @@
  * Return: a number
 */
 
-int getInt(char *msg)
-{
+#include <stdio.h>
+
+int getInt(char *msg) {
     int num;
     printf("%s", msg);
     scanf("%d", &num);

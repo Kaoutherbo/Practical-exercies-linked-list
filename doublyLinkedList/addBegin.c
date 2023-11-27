@@ -12,13 +12,13 @@ List* addBegin(List *list, int val) {
 
     if (list == NULL) {
         printf("Erreur : list is not initialize.\n");
-        exit(EXIT_FAILURE);
+        return NULL;
     }
 
     Node *newNode = (Node *)malloc(sizeof(Node));
     if (newNode == NULL) {
         printf("Erreur Memory can't be allocated.\n");
-        exit(EXIT_FAILURE);
+        return NULL;
     }
     newNode->data = val;
     newNode->next = list->head; 

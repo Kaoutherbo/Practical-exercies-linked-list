@@ -57,4 +57,5 @@ List* insertElement(List * list, int val, int position)
         currNode->next = newNode;
         newNode->prev = currNode;
     }
+     return list;
 }
