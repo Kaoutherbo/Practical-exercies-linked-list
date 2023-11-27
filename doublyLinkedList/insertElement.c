@@ -37,7 +37,7 @@ List* insertElement(List * list, int val, int position)
     else
     {
         Node *currNode = list->head;
-        int pos = 0;
+        int pos = 1;
 
         while (currNode != NULL && pos < position - 1) {
             currNode = currNode->next;

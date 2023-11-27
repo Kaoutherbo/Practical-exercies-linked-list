@@ -17,7 +17,6 @@ void displayList(List* list)
 
     Node *temp = list->head; 
 
-    printf("The elements of the list  are : ");
     while (temp != NULL) {
         printf("%d ", temp->data);
         temp = temp->next; 

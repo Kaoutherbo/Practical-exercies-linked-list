@@ -17,7 +17,6 @@ void displayRevList(List* list)
 
     Node *temp = list->tail; 
 
-    printf("The elements of the list in reverse are : ");
     while (temp != NULL) {
         printf("%d ", temp->data);
         temp = temp->prev; 

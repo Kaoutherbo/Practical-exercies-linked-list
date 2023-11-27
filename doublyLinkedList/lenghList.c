@@ -13,7 +13,7 @@ int lenghList(List * list)
     int count = 0;
     if(!isEmpty(list)){
     Node * current = list->head;
-    while (current != list->tail) {
+    while (current != list->tail->next) {
         count++;
         current = current->next;
         }

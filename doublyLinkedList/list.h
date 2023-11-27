@@ -36,7 +36,6 @@ typedef struct List
 
 // prototype of functions
 void initList(List** list);
-
 Node* createNode(int data);
 bool isEmpty(List *list);
 int lenghList(List * list);

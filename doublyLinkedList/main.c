@@ -10,22 +10,48 @@ int main() {
     // Initialization of a list
     List *myList;
     initList(&myList);
-    int option;
+
+    if (isEmpty(myList))
+    {
+        printf("The list is empty ");
+    }
+    
+    int option, position;
     do
     {
-         option = getInt("Type 1 If you want to add elements at the beginning\nType 2 If you want to add elements at the end: ");
+        option = getInt("\nType 1 If you want to add elements at the beginning\nType 2 If you want to add elements at the end: ");
     } while (option != 1 && option != 2);
     
     // create list
     myList = createList(&myList, option);
 
+    // lengh of list 
+    printf("\nThe lenght of this list is %d", lenghList(myList));
+
     // Display the list
-    printf("List after adding elements:\n");
+    printf("\nList after adding elements:\n");
     displayList(myList);
+
+    // Display list in reverse
+    printf("\nThe elements of the list in reverse are : ");
+    displayRevList(myList);
 
     do
     {
-         option = getInt("\nType 1 for deleting a node from the beginning\nType 2 for deleting a node from the end: ");
+        printf("\nEnter a position to add a node : ");
+        scanf("%d", &position);
+    } while (position > lenghList(myList) + 1 && position <= 0);
+    
+    int num;
+    printf("Enter a number : ");
+    scanf("%d", &num);
+    // Add an element at the given position
+    myList = insertElement(myList, num, position);
+    printf("\nThe list after inserting a node in position %d is : ", position);
+    displayList(myList);
+    do
+    {
+        option = getInt("\nType 1 for deleting a node from the beginning\nType 2 for deleting a node from the end: ");
     } while (option != 1 && option != 2);
     
     // Delete element in the list
