@@ -47,7 +47,7 @@ void displayRevList(List* list);
 List* deleteEnd(List *list);
 List* deleteBegin(List *list);
 void freeList(List *list);
-bool searchElement(List *list, int val);
+int searchElement(List *list, int val);
 List* copyList(List *list1, List *list2);
 int getInt(char *msg);
 List* createList(List **list, int option);

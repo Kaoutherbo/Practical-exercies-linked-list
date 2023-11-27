@@ -9,21 +9,22 @@
  * Return: position of val in the list or -1 if it's not found
 */
 
-bool searchElement(List *list, int val)
+int searchElement(List *list, int val)
 {
     if (list == NULL || list->head == NULL)
     {
-        return false;
+        return -1;
     }
     Node *currNode = list->head;
-    
+    int pos = 1;
     while (currNode != NULL)
     {
         if (currNode->data == val)
         {
-            return true;
+            return pos;
         }
         currNode = currNode->next;
+        pos++;
     }
-    return false;
+    return -1;
 }

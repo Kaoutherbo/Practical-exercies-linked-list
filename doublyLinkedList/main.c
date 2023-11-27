@@ -25,7 +25,7 @@ int main() {
     // create list
     myList = createList(&myList, option);
 
-    // lengh of list 
+    // lenght of list 
     printf("\nThe lenght of this list is %d", lenghList(myList));
 
     // Display the list
@@ -43,12 +43,22 @@ int main() {
     } while (position > lenghList(myList) + 1 && position <= 0);
     
     int num;
-    printf("Enter a number : ");
+    printf("\nEnter a number : ");
     scanf("%d", &num);
     // Add an element at the given position
     myList = insertElement(myList, num, position);
     printf("\nThe list after inserting a node in position %d is : ", position);
     displayList(myList);
+    // search element
+    printf("\nEnter a number to search: ");
+    scanf("%d", &num);
+
+    if (searchElement(myList, num))
+    {
+        printf("\nElement %d found at position %d.\n", num, searchElement(myList, position));
+    } else {
+        printf("\nElement %d not found in the list.\n", num);
+    }
     do
     {
         option = getInt("\nType 1 for deleting a node from the beginning\nType 2 for deleting a node from the end: ");
