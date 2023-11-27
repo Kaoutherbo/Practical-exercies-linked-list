@@ -32,13 +32,6 @@ int main() {
     printf("\nList after adding elements:\n");
     displayList(myList);
 
-    List* copiedList;
-    initList(&copiedList);
-    // Copy source list to destination list
-    copiedList = copyList(myList, &copiedList);
-    // Display copied list
-    printf("\nCopied List:\n");
-    displayList(copiedList);
 
     // Display list in reverse
     printf("\nThe elements of the list in reverse are : ");
@@ -81,7 +74,7 @@ int main() {
 
     // Free the memory allocated for the lists
     freeList(myList);
-    //freeList(copiedList);
+
 
     return 0;
 }
