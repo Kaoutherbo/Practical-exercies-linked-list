@@ -48,5 +48,8 @@ List* deleteBegin(List *list);
 void freeList(List *list);
 int searchElement(List *list, int val);
 List* copyList(List *list1, const List *list2);
+int getInt(char *msg);
+List* createList(List **list, int option);
+List* deleteOption(List** list, int option);
 
 #endif
