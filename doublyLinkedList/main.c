@@ -32,6 +32,14 @@ int main() {
     printf("\nList after adding elements:\n");
     displayList(myList);
 
+    List* copiedList;
+    initList(&copiedList);
+    // Copy source list to destination list
+    copiedList = copyList(myList, &copiedList);
+    // Display copied list
+    printf("\nCopied List:\n");
+    displayList(copiedList);
+
     // Display list in reverse
     printf("\nThe elements of the list in reverse are : ");
     displayRevList(myList);
@@ -53,7 +61,7 @@ int main() {
     printf("\nEnter a number to search: ");
     scanf("%d", &num);
 
-    if (searchElement(myList, num))
+    if (searchElement(myList, num) != -1)
     {
         printf("\nElement %d found at position %d.\n", num, searchElement(myList, position));
     } else {
@@ -73,6 +81,7 @@ int main() {
 
     // Free the memory allocated for the lists
     freeList(myList);
+    //freeList(copiedList);
 
     return 0;
 }

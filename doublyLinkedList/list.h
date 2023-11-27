@@ -36,7 +36,6 @@ typedef struct List
 
 // prototype of functions
 void initList(List** list);
-Node* createNode(int data);
 bool isEmpty(List *list);
 int lenghList(List * list);
 List* addBegin(List * list, int val);
@@ -48,7 +47,7 @@ List* deleteEnd(List *list);
 List* deleteBegin(List *list);
 void freeList(List *list);
 int searchElement(List *list, int val);
-List* copyList(List *list1, List *list2);
+List* copyList(List *list1, List **list2);
 int getInt(char *msg);
 List* createList(List **list, int option);
 List* deleteOption(List** list, int option);
